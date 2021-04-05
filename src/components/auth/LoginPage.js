@@ -25,6 +25,7 @@ export const Loginpage = () => {
     const handleLogin = (e) => {
 
         e.preventDefault();
+
         if (isFormValid()) {
 
             dispatch(startLogin(email, password));
@@ -34,8 +35,8 @@ export const Loginpage = () => {
 
 
     }
-
     const handleGoogleLogin = () => {
+
 
         dispatch(startGoogleLogin());
     }
@@ -115,7 +116,7 @@ export const Loginpage = () => {
 
                     <p>Ingresar con redes sociales</p>
 
-                    <div className="google-btn" onChange={handleGoogleLogin}>
+                    <div className="google-btn" onClick={handleGoogleLogin}>
                         <div className="google-icon-wrapper">
                             <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
                         </div>
@@ -125,7 +126,7 @@ export const Loginpage = () => {
                     </div>
 
                     {/* btn facebook */}
-                    <div className="fb-btn" onChange={handleFacebookLogin}>
+                    <div className="fb-btn" onClick={handleFacebookLogin}>
                         <div className="fb-icon-wrapper">
                             <img className="fb-icon" src="https://static.xx.fbcdn.net/rsrc.php/yz/r/KFyVIAWzntM.ico" alt="facebook button" />
                         </div>
@@ -138,7 +139,7 @@ export const Loginpage = () => {
                 <Link className="link"
                     to="/auth/register">
 
-                    Create new Account
+                    Crear una nueva cuenta
 
                 </Link>
 

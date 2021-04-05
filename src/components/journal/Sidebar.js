@@ -19,9 +19,11 @@ export const Sidebar = () => {
     }
     const handleAdd = () => {
 
-        dispatch( startNewNote() );
+        dispatch(startNewNote());
     }
 
+    const ahora = new Date();
+    const hora = ahora.getHours();
 
 
 
@@ -32,7 +34,16 @@ export const Sidebar = () => {
             <div className="journal__sidebar-navbar">
 
                 <h3 className=" mt-5">
-                    <i className="far fa-moon"></i>
+                    {
+                       hora<12 ?
+                       <i className="far fa-sun"></i>
+                       &&
+                       hora>18 && hora>24 :
+                       <i className="far fa-moon"></i>
+                      
+
+                    } 
+                 
                     <span>  {name}</span>
                 </h3>
 

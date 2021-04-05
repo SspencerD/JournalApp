@@ -153,7 +153,6 @@ export const startDelete=( id ) =>{
             Swal.fire({
                 title:'Estas seguro borrar la nota?',
                 showCancelButton: true,
-                showCancelButton: true,
                 confirmButtonText:'Si',
                 denyButtonText:'Borrar',
             }).then((result) =>{
